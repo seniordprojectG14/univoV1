@@ -11,16 +11,6 @@ import PostItem from './PostItem';
 
 
 
-
-
-
-
-
- 
-  
-  
-
-
         return(
             <PostItem post={post} setCurrentId={setCurrentId} user={user} setUser={setUser}/>  
         )

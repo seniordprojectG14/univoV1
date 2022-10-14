@@ -68,7 +68,7 @@ module.exports.getPost = async (req, res) => {
 module.exports.createPost = async (req, res) => {
  
     
-    const uploadSingle = upload("stevenewbucket").array( 'imagecropped', 2 );
+    const uploadSingle = upload("stevenewbucket").array( 'imagecropped', 1 );
       uploadSingle(req, res, async (err) => {
         if (err)
           return res.status(400).json({ success: false, message: err.message });

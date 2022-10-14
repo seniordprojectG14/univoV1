@@ -25,7 +25,7 @@ function App() {
             <Routes>
         {/* <Route path="/" element={<Homepage />}/> */}
       
-        <Route path="/*" element={<Home currentId={currentId} setCurrentId={setCurrentId} />}/>
+        <Route path="/" element={<Home currentId={currentId} setCurrentId={setCurrentId} />}/>
 
 
         {/* <Route path="/Auth" element={<Homepage />}/>  

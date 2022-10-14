@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const baseURL = axios.create({ baseURL: 'https://univinfosdp.herokuapp.com' });
-const url = 'https://univinfosdp.herokuapp.com'
+const baseURL = axios.create({ baseURL: 'https://univinfomation.herokuapp.com' });
+const url = 'https://univinfomation.herokuapp.com'
 API.interceptors.request.use((req) => {
     if (localStorage.getItem('form')) {
       req.headers.Authorization = `Bearer ${JSON.parse(localStorage.getItem('form')).token}`;

@@ -2,10 +2,9 @@ const express = require("express");
 const connectDB = require("./config/db");
 const dotenv = require("dotenv");
 const userRoutes = require("./routes/userRoutes");
-const postRoutes = require("./routes/posts")
 const chatRoutes = require("./routes/chatRoutes");
 const messageRoutes = require("./routes/messageRoutes");
-const aparmentPostRoute = require("./routes/aparmentPostRoute");
+const PostRoute = require("./routes/PostRoute");
 const { notFound, errorHandler } = require("./middleware/errorMiddleware");
 const path = require("path");
 
@@ -20,7 +19,7 @@ app.use(express.json()); // to accept json data
 //   res.send("API Running!");
 // });
 // app.use("/posts", postRoutes);
-app.use("/posts", aparmentPostRoute);
+app.use("/posts", PostRoute);
 app.use("/api/user", userRoutes);
 app.use("/api/chat", chatRoutes);
 app.use("/api/message", messageRoutes);

@@ -143,7 +143,7 @@ function SideDrawer() {
           </Button>
         </Tooltip>
         <Text fontSize="2xl" fontFamily="Work sans">
-          Aparmate
+          univ info
         </Text>
         <div>
           <Menu>

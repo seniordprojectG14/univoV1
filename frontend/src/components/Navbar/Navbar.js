@@ -33,7 +33,7 @@ const Navbar = (props ) => {
     localStorage.removeItem("userInfo");
     //props.setUser(undefined);
    // props.history.push("/Auth");
-    navigate("/Home/Auth")
+    navigate("/Auth")
     
   };
 
@@ -59,20 +59,20 @@ const personAsObjectAgain = JSON.parse(stringifiedPerson);
 
   return (
     <header className={classes.header}>
-      <div className={classes.logo}>Apartmate</div>
+      <div className={classes.logo}>univinfo</div>
       <nav>
         <ul>
           <li>
-            <Link to="/Home/Blog">Listings Page</Link>
+            <Link to="/Blog">Post Page</Link>
           </li>
           <li>
-            <Link to="/Home/CreatePost">Add Listing</Link>
+            <Link to="/NewPost">Add Post</Link>
           </li>
           <li>
-            <Link to="/Home/MyPost">My Listings</Link>
+            <Link to="/MyPost">My Post</Link>
           </li>
           <li>
-            <Link to="/Home/Chats">Chat</Link>
+            <Link to="/Chats">Chat</Link>
           </li>
           {/* <li>
             <Link to='/checkout'>checkout</Link>
@@ -87,7 +87,7 @@ const personAsObjectAgain = JSON.parse(stringifiedPerson);
           </div>
         ) : (
           
-          <Button component={Link} to="/Home/Auth" variant="contained" color="primary">Sign In</Button>
+          <Button component={Link} to="/Auth" variant="contained" color="primary">Sign In</Button>
         )}
           </li>
 

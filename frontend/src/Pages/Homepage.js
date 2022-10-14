@@ -19,8 +19,6 @@ function Homepage() {
   const navigate = useNavigate()
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem("userInfo"));
-    
-    //if (user) navigate("Home/chats");
   }, [navigate]);
 
   return (
@@ -36,7 +34,7 @@ function Homepage() {
         borderWidth="1px"
       >
         <Text fontSize="4xl" fontFamily="Work sans">
-          Apartmate
+          univinfo
         </Text>
       </Box>
       <Box bg="white" w="100%" p={4} borderRadius="lg" borderWidth="1px">

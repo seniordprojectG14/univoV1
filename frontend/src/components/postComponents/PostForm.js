@@ -51,7 +51,7 @@ const PostForm = ({ currentId, setCurrentId, user, setUser}) => {
       
          const formdata = new FormData();
         
-         for ( let i = 0; i < image.length; i++ ) {
+         for ( let i = 0; i < image?.length; i++ ) {
           formdata.append( "imagecropped", image[ i ], image[ i ].name );
         }
         console.log(JSON.stringify(image) + "formdata pics");

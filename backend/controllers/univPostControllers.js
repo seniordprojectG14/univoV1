@@ -96,7 +96,7 @@ module.exports.createPost = async (req, res) => {
         });
 
     } catch (error) {
-        res.status(409).json({filesArray: fileArray});
+       // res.status(409).json({filesArray: fileArray});
     }
 });
 };

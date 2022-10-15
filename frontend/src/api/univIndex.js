@@ -1,5 +1,6 @@
 import axios from 'axios';
 
+//const baseURL = axios.create({ baseURL: 'https://univinfomation.herokuapp.com' });
 const baseURL = axios.create({ baseURL: 'https://univinfomation.herokuapp.com' });
 const url = 'https://univinfomation.herokuapp.com'
 API.interceptors.request.use((req) => {
@@ -10,9 +11,9 @@ API.interceptors.request.use((req) => {
     return req;
 });
 
-export const fetchPosts = () => API.get('/univposts');
+export const fetchPosts = () => API.get('/posts');
 
-export const createPost = (newPost) => API.post('/univposts', newPost);
+export const createPost = (newPost) => API.post('/posts', newPost);
 //export const likePost = (id) => axios.patch(`${url}/${id}/likePost`);
 //export const updatePost = (id, updatedPost) => axios.patch(`${url}/${id}`, updatedPost);
 //export const deletePost = (id) => axios.delete(`${id}`);

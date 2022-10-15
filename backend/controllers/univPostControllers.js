@@ -8,7 +8,7 @@ const multerS3 = require("multer-s3");
 const mongoose = require('mongoose');
 
 
-const Postmodel = require('../models/Postmodel');
+const Postmodel = require('./models/Postmodel');
 
  
 
@@ -43,7 +43,7 @@ const s3 = new aws.S3({
 
 module.exports.getPosts = async (req, res) => { 
     try {
-        const Messages = await PostModel.find();
+        const Messages = await Postmodel.find();
                 
         res.status(200).json(Messages);
     } catch (error) {
@@ -55,7 +55,7 @@ module.exports.getPost = async (req, res) => {
     const { id } = req.params;
 
     try {
-        const post = await PostModel.findById(id);
+        const post = await Postmodel.findById(id);
         
         res.status(200).json(post);
     } catch (error) {
@@ -88,7 +88,7 @@ module.exports.createPost = async (req, res) => {
 
 
 
-        await PostModel.create({
+        await Postmodel.create({
           //photos: galleryImgLocationArray, 
             address: address,
             description: description,
@@ -107,7 +107,7 @@ module.exports.deletePost = async (req, res) => {
 
     if (!mongoose.Types.ObjectId.isValid(id)) return res.status(404).send(`No post with id: ${id}`);
 
-    await PostModel.findByIdAndRemove(id);
+    await Postmodel.findByIdAndRemove(id);
 
     res.json({ message: "Post deleted successfully." });
 }

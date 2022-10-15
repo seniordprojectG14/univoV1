@@ -8,7 +8,7 @@ const multerS3 = require("multer-s3");
 const mongoose = require('mongoose');
 
 
-const PostModel = require('../models/postModel')
+const PostModel = require('../models/PostModel')
 
  
 
@@ -43,9 +43,9 @@ const s3 = new aws.S3({
 
 module.exports.getPosts = async (req, res) => { 
     try {
-        const aparmentMessages = await PostModel.find();
+        const Messages = await PostModel.find();
                 
-        res.status(200).json(aparmentMessages);
+        res.status(200).json(Messages);
     } catch (error) {
         res.status(404).json({ message: error.message });
     }
@@ -73,24 +73,23 @@ module.exports.createPost = async (req, res) => {
         if (err)
           return res.status(400).json({ success: false, message: err.message });
     try {
-        let fileArray = req.files,
-					fileLocation;
-
-        
+        // let fileArray = req.files,
+				// 	fileLocation;
         const address = req.body.address
         const description = req.body.description
         const username = req.body.username
         const galleryImgLocationArray = [];
-				for ( let i = 0; i < fileArray.length; i++ ) {
-					fileLocation = fileArray[ i ].location;
-					galleryImgLocationArray.push( fileLocation )
-				}
+				// for ( let i = 0; i < fileArray.length; i++ ) {
+				// 	fileLocation = fileArray[ i ].location;
+				// 	galleryImgLocationArray.push( fileLocation )
+				// }
 
 
 
 
 
-        await PostModel.create({photos: galleryImgLocationArray, 
+        await PostModel.create({
+          //photos: galleryImgLocationArray, 
             address: address,
             description: description,
             typeofpost: typeofpost,

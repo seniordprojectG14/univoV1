@@ -4,6 +4,7 @@ const dotenv = require("dotenv");
 const userRoutes = require("./routes/userRoutes");
 const chatRoutes = require("./routes/chatRoutes");
 const messageRoutes = require("./routes/messageRoutes");
+
 const PostRoute = require("./routes/PostRoute");
 const { notFound, errorHandler } = require("./middleware/errorMiddleware");
 const path = require("path");

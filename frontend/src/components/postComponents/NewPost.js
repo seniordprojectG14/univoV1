@@ -9,7 +9,7 @@ import useStyles from './styles';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
-import Post from './Post';
+import Post from './PostForm';
 
 
 

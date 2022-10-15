@@ -10,9 +10,9 @@ API.interceptors.request.use((req) => {
     return req;
 });
 
-export const fetchPosts = () => API.get('/posts');
+export const fetchPosts = () => API.get('/univposts');
 
-export const createPost = (newPost) => API.post('/posts', newPost);
+export const createPost = (newPost) => API.post('/univposts', newPost);
 //export const likePost = (id) => axios.patch(`${url}/${id}/likePost`);
 //export const updatePost = (id, updatedPost) => axios.patch(`${url}/${id}`, updatedPost);
 //export const deletePost = (id) => axios.delete(`${id}`);

@@ -2,7 +2,7 @@
 //const express = require('express');
 
 
-const {getPosts, getPost, createPost, deletePost} = require('../controllers/univPostControllers.js')
+const {getPosts, getPost, createPost, deletePost} = require("../controllers/univPostControllers")
 
 
 

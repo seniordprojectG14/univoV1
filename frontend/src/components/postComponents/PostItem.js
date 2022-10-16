@@ -20,7 +20,6 @@ const PostItem = ({ post, setCurrentId, user, setUser,proplist }) => {
         <div className={classes.content}>
           <h3>addres: {post.address}</h3>
           <div className={classstyles.details}>
-        <Typography variant="body2" color="textSecondary" component="h2">number of bedrooms: {post.nbedrooms}</Typography>
         <div style={{textalign: 'center',
             paddingLeft: '480px'}}>
         <img src={post.photos[0]}  height={'200px'} width={'300px'} alt="BigCo Inc. logo"/>
@@ -29,7 +28,7 @@ const PostItem = ({ post, setCurrentId, user, setUser,proplist }) => {
     
         <Typography variant="body2" color="textSecondary" component="h2">username:{post.username}</Typography>
             </div>
-          <p>{post.description}</p>
+          <p>description: {post.description}</p>
         </div>
         <div className={classes.actions}>
         <Button>Chat</Button>

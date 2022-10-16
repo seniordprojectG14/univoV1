@@ -55,6 +55,7 @@ const PostForm = ({ currentId, setCurrentId, user, setUser}) => {
           formdata.append( "imagecropped", image[ i ], image[ i ].name );
         }
         console.log(JSON.stringify(image) + "formdata pics");
+        formdata.append("len", image?.length);
         formdata.append("address", postData.address)
         formdata.append("description", postData.description)
         formdata.append("username", user?.username)

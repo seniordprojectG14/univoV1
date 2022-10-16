@@ -65,30 +65,32 @@ module.exports.getPost = async (req, res) => {
 
 
 module.exports.createPost = async (req, res) => {
- 
-    
-    const uploadSingle = upload("stevenewbucket").array( 'imagecropped', 1 );
+  // let fileList = req.files,
+  // fileLocation;
+    let len = req.body.len
+    const uploadSingle = upload("stevenewbucket").array( 'imagecropped', len );
       uploadSingle(req, res, async (err) => {
         if (err)
           return res.status(400).json({ success: false, message: err.message });
     try {
-        // let fileArray = req.files,
-				// 	fileLocation;
+        let fileArray = req.files,
+					fileLocation;
+        
         const address = req.body.address
         const description = req.body.description
         const username = req.body.username
         const galleryImgLocationArray = [];
-				// for ( let i = 0; i < fileArray.length; i++ ) {
-				// 	fileLocation = fileArray[ i ].location;
-				// 	galleryImgLocationArray.push( fileLocation )
-				// }
+				for ( let i = 0; i < fileArray?.length; i++ ) {
+					fileLocation = fileArray[ i ].location;
+					galleryImgLocationArray.push( fileLocation )
+				}
 
 
 
 
 
         await Postmodel.create({
-            // photos: galleryImgLocationArray, 
+            photos: galleryImgLocationArray, 
             address: address,
             description: description,
             username: username,

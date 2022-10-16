@@ -88,15 +88,14 @@ module.exports.createPost = async (req, res) => {
 
 
         await Postmodel.create({
-          //photos: galleryImgLocationArray, 
+            // photos: galleryImgLocationArray, 
             address: address,
             description: description,
-            typeofpost: typeofpost,
             username: username,
         });
 
     } catch (error) {
-       // res.status(409).json({filesArray: fileArray});
+      //  res.status(409).json({data: data});
     }
 });
 };

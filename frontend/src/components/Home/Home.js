@@ -14,6 +14,7 @@ import MyPost from '../postComponents/MyPost';
 //import Chat from '../../pages/Chat';
 import Chatpage from '../../Pages/Chatpage';
 import Homepage from '../../Pages/Homepage';
+import MapList from '../map/MapList';
 
 //import SetAvatar from '../SetAvatar';
 
@@ -56,7 +57,8 @@ const Home = (props ) => {
             
             <Route path="NewPost" element={<NewPost currentId={props.currentId} setCurrentId={props.setCurrentId} user={username} setUser={setUserName}/>}/>
            
-            <Route path="MyPost" element={<MyPost currentId={props.currentId} setCurrentId={props.setCurrentId} user={username} setUser={setUserName}/>}/> 
+            <Route path="MyPost" element={<MyPost currentId={props.currentId} setCurrentId={props.setCurrentId} user={username} setUser={setUserName}/>}/>
+            <Route path="Map" element={<MapList currentId={props.currentId} setCurrentId={props.setCurrentId} user={username} setUser={setUserName}/>}/>  
             {/* <Route path="SetAvatar" element={<SetAvatar/>}/> */}
             <Route path= "chats" element={<Chatpage />} /> 
             </Routes>

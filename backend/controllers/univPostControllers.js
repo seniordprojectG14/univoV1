@@ -8,7 +8,7 @@ const multerS3 = require("multer-s3");
 const mongoose = require('mongoose');
 
 
-const Postmodel = require("../models/userModel");
+const Postmodel = require("../models/PostModel");
 
 
 const router = express.Router();

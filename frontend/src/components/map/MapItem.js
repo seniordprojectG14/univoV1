@@ -10,7 +10,7 @@ import PushPinIcon from '@mui/icons-material/PushPin';
 
 
 
-const MapItem = ({ post, setCurrentId, user, setUser,proplist }) => {
+const MapItem = ({ post,defaultCenter, setCurrentId, user, setUser,proplist }) => {
   const classstyles = useStyles();
   const [latt, setLat] = React.useState('');
   const [lngg, setLng] = React.useState('');
@@ -46,6 +46,8 @@ const MapItem = ({ post, setCurrentId, user, setUser,proplist }) => {
 
   
     return(
+
+      
       <li className={classes.item}>
         <Tooltip title={
 
@@ -76,11 +78,11 @@ const MapItem = ({ post, setCurrentId, user, setUser,proplist }) => {
         } arrow>
   <Button>
     
-    
+  
     <AnyReactComponent
               lat={latt}
               lng={lngg}
-              
+             
             />
             
             

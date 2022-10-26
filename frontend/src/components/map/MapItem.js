@@ -65,7 +65,7 @@ const MapItem = ({ post,defaultCenter, setCurrentId, user, setUser,proplist }) =
   </div>
 
 
-  <Typography variant="body2" color="textSecondary" component="h2">username:{post.username}</Typography>
+  <Typography variant="body2" color="textSecondary" component="h2">username:{post?.username}</Typography>
       </div>
     <p>description: {post.description}</p>
   </div>

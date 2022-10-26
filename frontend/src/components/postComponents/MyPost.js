@@ -17,7 +17,7 @@ const MyPost = ({ currentId,setCurrentId, user, setUser }) => {
     posts.map((post) => {
       console.log("here");
       console.log("Username" + JSON.stringify(user?.username));
-        if(post.username === user.username){
+        if(post?.username === user?.username){
           setCounter(true);    
     }
     }
@@ -42,7 +42,7 @@ return (
   {posts.map((post) => {
     console.log("here");
     console.log("Username" + JSON.stringify(user?.username));
-      if(post.username === user.username){
+      if(post?.username === user?.username){
           return( <PersonalPost post={post}/>)
   }
   }

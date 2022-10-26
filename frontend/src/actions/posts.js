@@ -1,6 +1,6 @@
 import { FETCH_ALL, CREATE, DELETE} from '../constants/actionTypes';
 import axios from 'axios';
-import * as api from '../api/index.js';
+import * as api from '../api/univIndex.js';
 
 export const getPosts = () => async (dispatch) => {
   try {
@@ -68,10 +68,10 @@ export const likePost = (id) => async (dispatch) => {
 
 export const deletePost = (id) => async (dispatch) => {
   try {
-   /// console.log("deleting post with id " + id.id);
-    await api.deletePost(id.id);
+    console.log("deleting post with id " + id.id);
+    await axios.delete(`${'https://univinfomation.herokuapp.com'}/${id.id}`);
     // console.log("deleting post with id " + id.id);
-    dispatch({ type: DELETE, payload: id.id });
+    //dispatch({ type: DELETE, payload: id.id });
   } catch (error) {
     console.log(error.message);
   }

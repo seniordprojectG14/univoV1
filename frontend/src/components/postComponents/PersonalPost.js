@@ -12,12 +12,12 @@ import { makeStyles } from '@material-ui/core/styles';
 
 
 
-const PersonalPost = ({ post, setCurrentId, user, setUser }) => {
-const dispatch = useDispatch();
-const classstyles = useStyles();
-// const user = JSON.parse(localStorage.getItem('name'));
-
-
+  const PersonalPost = ({ post, setCurrentId, user, setUser }) => {
+  const dispatch = useDispatch();
+  const classstyles = useStyles();
+  // const user = JSON.parse(localStorage.getItem('name'));
+  
+ 
 
 const handleOnSubmit = (e) =>{
   e.preventDefault();

@@ -69,7 +69,8 @@ export const likePost = (id) => async (dispatch) => {
 export const deletePost = (id) => async (dispatch) => {
   try {
     console.log("deleting post with id " + id.id);
-    await axios.delete(`${'https://univinfomation.herokuapp.com'}/${id.id}`);
+    // await axios.delete(`${'https://univinfomation.herokuapp.com'}/${id.id}`);
+    await axios.delete(`/posts/${id.id}`);
     // console.log("deleting post with id " + id.id);
     //dispatch({ type: DELETE, payload: id.id });
   } catch (error) {

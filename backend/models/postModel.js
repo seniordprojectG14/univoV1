@@ -9,6 +9,8 @@ const mongoose = require("mongoose");
     },
     typeofpost: String,
     username: String,
+    latL: Number,
+    lngL: Number,
     
 })
 

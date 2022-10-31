@@ -16,7 +16,7 @@ const MapItem = ({ post,defaultCenter, setCurrentId, user, setUser,proplist }) =
   const [lngg, setLng] = React.useState('');
   useEffect(() => {
 
-    Geocode.setLanguage("en");
+  Geocode.setLanguage("en");
   Geocode.setApiKey("AIzaSyBBoDTa2K0ql0d3ssnlMEYXdBvQLI6_LqA");
   Geocode.fromAddress(post.address).then(
     (response) => {
@@ -50,7 +50,6 @@ const MapItem = ({ post,defaultCenter, setCurrentId, user, setUser,proplist }) =
       
       <li className={classes.item}>
         <Tooltip title={
-
 <Card>
 <CardMedia className={classes.media} image={post.photo || 'https://user-images.githubusercontent.com/194400/49531010-48dad180-f8b1-11e8-8d89-1e61320e1d82.png'} title={post.photo} />
   <div className={classes.content}>

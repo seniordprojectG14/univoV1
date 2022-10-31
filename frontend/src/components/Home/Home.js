@@ -14,8 +14,9 @@ import MyPost from '../postComponents/MyPost';
 //import Chat from '../../pages/Chat';
 import Chatpage from '../../Pages/Chatpage';
 import Homepage from '../../Pages/Homepage';
+import GoogleMaps from '../map/GoogleMaps';
 import MapList from '../map/MapList';
-
+import { useSelector } from 'react-redux';
 //import SetAvatar from '../SetAvatar';
 
 
@@ -40,6 +41,7 @@ const Home = (props ) => {
   useEffect(async() => {
       dispatch(getPosts());
   }, [currentId, dispatch]);
+
   
   
 
@@ -58,7 +60,9 @@ const Home = (props ) => {
             <Route path="NewPost" element={<NewPost currentId={props.currentId} setCurrentId={props.setCurrentId} user={username} setUser={setUserName}/>}/>
            
             <Route path="MyPost" element={<MyPost currentId={props.currentId} setCurrentId={props.setCurrentId} user={username} setUser={setUserName}/>}/>
-            <Route path="Map" element={<MapList currentId={props.currentId} setCurrentId={props.setCurrentId} user={username} setUser={setUserName}/>}/>  
+            <Route path="Map" element={
+                 <GoogleMaps  currentId={props.currentId} setCurrentId={props.setCurrentId}/>
+            }/>  
             {/* <Route path="SetAvatar" element={<SetAvatar/>}/> */}
             <Route path= "chats" element={<Chatpage />} /> 
             </Routes>

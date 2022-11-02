@@ -77,9 +77,9 @@ const personAsObjectAgain = JSON.parse(stringifiedPerson);
           <li>
             <Link to="/Map">Map</Link>
           </li>
-          {/* <li>
-            <Link to='/checkout'>checkout</Link>
-          </li> */}
+          <li>
+            <Link to="/MyProfile">MyProfile</Link>
+          </li>
           <li>
           
           {username ? (

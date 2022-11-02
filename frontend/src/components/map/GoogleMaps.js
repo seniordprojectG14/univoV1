@@ -9,8 +9,6 @@ import PushPinIcon from '@mui/icons-material/PushPin';
 const GoogleMaps = ({ currentId, setCurrentId }) => {
   const posts = useSelector((state) => state.posts);
   
-
-
 const AnyReactComponent = props => {
         
   return (
@@ -76,9 +74,6 @@ const AnyReactComponent = props => {
       {/* <Marker lat={43.80593409999999} lng={-74.25367539999999 }/> */}
       <AnyReactComponent  
          lat={41.80593409999999} lng={-72.25367539999999 }/>
-
-
-
     </GoogleMapReact>
    </div>
  );

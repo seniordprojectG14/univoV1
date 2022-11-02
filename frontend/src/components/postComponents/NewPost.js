@@ -9,7 +9,7 @@ import useStyles from './styles';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
-import Post from './PostForm';
+import PostForm from './PostForm';
 
 
 
@@ -52,7 +52,7 @@ const NewPost = ({ currentId, setCurrentId, user, setUser }) => {
   return (
     <>
       <Card>
-  <Post currentId={currentId} setCurrentId={setCurrentId} user={user} setUser={setUser}/>
+  <PostForm currentId={currentId} setCurrentId={setCurrentId} user={user} setUser={setUser}/>
   </Card>
   </>
   );

@@ -39,15 +39,15 @@ const NewPost = ({ currentId, setCurrentId, user, setUser }) => {
       if (post) setPostData(post);
     }, [post]);
 
-  if (!username) {
-    return (
-      <Paper className={classes.paper}>
-        <Typography variant="h6" align="center">
-          Please Sign IIn to create your own memories and like other's memories.
-        </Typography>
-      </Paper>
-    );
-  }
+  // if (!username) {
+  //   return (
+  //     <Paper className={classes.paper}>
+  //       <Typography variant="h6" align="center">
+  //         Please Sign IIn to create your own memories and like other's memories.
+  //       </Typography>
+  //     </Paper>
+  //   );
+  // }
 
   return (
     <>

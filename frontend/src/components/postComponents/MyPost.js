@@ -24,15 +24,15 @@ const MyPost = ({ currentId,setCurrentId, user, setUser }) => {
     )
   }, [posts]);
 
-  if (!user) {
-    return (
-      <Paper className={classes.paper}>
-        <Typography variant="h6" align="center">
-          Please Sign In to see your posts.
-        </Typography>
-      </Paper>
-    );
-  }
+  // if (!user) {
+  //   return (
+  //     <Paper className={classes.paper}>
+  //       <Typography variant="h6" align="center">
+  //         Please Sign In to see your posts.
+  //       </Typography>
+  //     </Paper>
+  //   );
+  // }
   
 
 return (

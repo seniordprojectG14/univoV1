@@ -22,16 +22,16 @@ import { makeStyles } from '@material-ui/core/styles';
 const handleOnSubmit = (e) =>{
   e.preventDefault();
   console.log(post._id, " post id");
-  dispatch(deletePost({id: post._id}));
+  //dispatch(deletePost({id: post._id}));
 
 }
 
 return (
-  <li className={classes.item}>
+  <li >
     <Card>
-      <div className={classes.content}>
+      <div >
         <h3>{post.title}</h3>
-        <div className={classstyles.details}>
+        <div>
       <Typography variant="body2" color="textSecondary" component="h2">{post.max}</Typography>
       <Typography variant="body2" color="textSecondary" component="h2">{post.max}</Typography>
       <Typography variant="body2" color="textSecondary" component="h2">{post.min}</Typography>
@@ -42,7 +42,7 @@ return (
       <Button onClick={handleOnSubmit}>
           <DeleteIcon/>
       </Button>
-      <div className={classes.actions}>
+      <div >
       <Button>Chat</Button>
       <p variant="body2">{moment(post.createdAt).fromNow()}</p>
      

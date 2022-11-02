@@ -25,7 +25,7 @@ const Navbar = (props ) => {
   const dispatch = useDispatch();
   const location = useLocation();
   
-  const classess = useStyles();
+  ///const classess = useStyles();
   
   const logout = () => {
     dispatch({ type: actionType.LOGOUT });
@@ -58,8 +58,10 @@ const stringifiedPerson = localStorage.getItem("name");
 const personAsObjectAgain = JSON.parse(stringifiedPerson);
 
   return (
-    <header className={classes.header}>
-      <div className={classes.logo}>univinfo</div>
+    // <header className={classes.header}>
+    <header>
+      {/* <div className={classes.logo}>univinfo</div> */}
+      <div >univinfo</div>
       <nav>
         <ul>
           <li>
@@ -71,9 +73,9 @@ const personAsObjectAgain = JSON.parse(stringifiedPerson);
           <li>
             <Link to="/MyPost">My Post</Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="/Chats">Chat</Link>
-          </li>
+          </li> */}
           <li>
             <Link to="/Map">Map</Link>
           </li>
@@ -83,10 +85,12 @@ const personAsObjectAgain = JSON.parse(stringifiedPerson);
           <li>
           
           {username ? (
-          <div className={classess.profile}>
+          // <div className={classess.profile}>
+          <div>
             {/* <Avatar className={classess.purple} alt={user?.result.name} src={user?.result.imageUrl}>{user?.result.name.charAt(0)}</Avatar>
             <Typography className={classess.userName} variant="h6">{user?.result.name}</Typography> */}
-            <Button variant="contained" className={classess.logout} color="secondary" onClick={logout}>Logout</Button>
+                        <Button variant="contained" color="secondary" onClick={logout}>Logout</Button>
+            {/* <Button variant="contained" className={classess.logout} color="secondary" onClick={logout}>Logout</Button> */}
           </div>
         ) : (
           

@@ -84,20 +84,19 @@ const Login = () => {
           onChange={(e) => setUsername(e.target.value)}/> 
       </form>
       <form>
-        <FormLabel>Password</FormLabel>
-        
-          <input
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            type={show ? "text" : "password"}
-            placeholder="Enter password"
-          />
+      <FormLabel>password</FormLabel>
+      <input
+          value={username}
+          // type="email"
+          placeholder="password"
+          onChange={(e) => setUsername(e.target.value)}/> 
+      
         
            
           
        
         </form>
-      
+      <button>submit</button>
       </>
     // </VStack>
   );

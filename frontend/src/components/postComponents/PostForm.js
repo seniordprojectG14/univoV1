@@ -88,17 +88,7 @@ const PostForm = ({ currentId, setCurrentId, user, setUser}) => {
     <input type='text' id='address' value={postData.address} onChange={(e) => setPostData({ ...postData, address: e.target.value})}/>
     </div>
   </div>
-  <div >
-    <label >add photos</label>
-    <div>
-    <div className="container-buttons">
-
-    <input multiple onChange={fileSelected} type="file" accept="image/*"></input>
-
-          
-              </div>
-          </div>
-  </div>
+  
   <div >
     <label htmlFor='description'>any other things to add</label>
     <div className={classes.control}>

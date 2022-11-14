@@ -1,5 +1,6 @@
 import {
   Box,
+  Button,
   Container,
   Tab,
   TabList,
@@ -40,8 +41,8 @@ function Homepage() {
       <Box bg="white" w="100%" p={4} borderRadius="lg" borderWidth="1px">
         <Tabs isFitted variant="soft-rounded">
           <TabList mb="1em">
-            <Tab>Login</Tab>
-            <Tab>Sign Up</Tab>
+            <Button>Login</Button>
+            <Button>Signup</Button>
           </TabList>
           <TabPanels>
             <TabPanel>

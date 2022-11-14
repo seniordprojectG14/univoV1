@@ -134,7 +134,7 @@ const Signup = () => {
       <form>
         <label>Name</label>
         <input
-          placeholder="Enter Your Name"
+          // placeholder="Enter Your Name"
           onChange={(e) => setName(e.target.value)}
         />
       </form>
@@ -142,7 +142,7 @@ const Signup = () => {
         <label>username</label>
         <input
           type="username"
-          placeholder="username"
+          // placeholder="username"
           onChange={(e) => setUsername(e.target.value)}
         />
       </form>
@@ -150,7 +150,7 @@ const Signup = () => {
         <label>Password</label>
         <input
           type="password"
-          placeholder="password"
+          // placeholder="password"
           onChange={(e) => setPassword(e.target.value)}
         />
          
@@ -158,19 +158,20 @@ const Signup = () => {
          
       </form>
       <form>
-        <label>Confirm Password</label>
+        {/* <label>Confirm Password</label>
         
           <input
             type={show ? "text" : "password"}
             placeholder="Confirm password"
             onChange={(e) => setConfirmpassword(e.target.value)}
-          />
+          /> */}
          
            
             
           
        
       </form>
+      <button>submit</button>
      
       
  </>

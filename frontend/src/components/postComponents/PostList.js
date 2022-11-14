@@ -6,14 +6,15 @@ import { useSelector } from 'react-redux';
 
 
 
-  const PostList = ({ setCurrentId, user }) => {
-    const posts = useSelector((state) => state.posts);
-   
+  const PostList = ({ setCurrentId, user, postdata }) => {
+
+    console.log(JSON.stringify(postdata) +" here");
   return (
 
     <div className="main">
 <ul className={classes.list}>
-  {posts?.map((post) => {
+  {postdata?.map((post) => {
+    console.log(JSON.stringify(post) +" here");
      return(
        <PostChain  post={post}  setCurrentId={setCurrentId} />
    );

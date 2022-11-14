@@ -83,19 +83,12 @@ const personAsObjectAgain = JSON.parse(stringifiedPerson);
             <Link to="/MyProfile">MyProfile</Link>
           </li>
           <li>
-          
-          {username ? (
-          // <div className={classess.profile}>
           <div>
-            {/* <Avatar className={classess.purple} alt={user?.result.name} src={user?.result.imageUrl}>{user?.result.name.charAt(0)}</Avatar>
-            <Typography className={classess.userName} variant="h6">{user?.result.name}</Typography> */}
-                        <Button variant="contained" color="secondary" onClick={logout}>Logout</Button>
-            {/* <Button variant="contained" className={classess.logout} color="secondary" onClick={logout}>Logout</Button> */}
+          <Button component={Link} to="/SignUp" >sign up</Button>
           </div>
-        ) : (
+          <Button component={Link} to="/SignIn" >Sign In</Button>
           
-          <Button component={Link} to="/Auth" variant="contained" color="primary">Sign In</Button>
-        )}
+          
           </li>
 
 

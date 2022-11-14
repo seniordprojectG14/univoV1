@@ -19,7 +19,9 @@ import MapList from '../map/MapList';
 import { useSelector } from 'react-redux';
 import MyProfile from '../postComponents/myProfile/MyProfile';
 //import SetAvatar from '../SetAvatar';
-
+import Login from '../Authentication/Login';
+import Signup from '../Authentication/Signup';
+import { postdata } from '../postComponents/postdata';
 
 
 const Home = (props ) => {
@@ -56,7 +58,7 @@ const Home = (props ) => {
             <Routes>
 
               <Route path="Auth" element={<Homepage />}/>  
-             <Route path="Blog" element={<PostList currentId={props.currentId} setCurrentId={props.setCurrentId} user={username} setUser={setUserName}/>}/> 
+             <Route path="Blog" element={<PostList currentId={props.currentId} setCurrentId={props.setCurrentId} user={username} setUser={setUserName} postdata={postdata}/>}/> 
             
             <Route path="NewPost" element={<NewPost currentId={props.currentId} setCurrentId={props.setCurrentId} user={username} setUser={setUserName}/>}/>
            
@@ -66,6 +68,8 @@ const Home = (props ) => {
             }/>  
             <Route path="MyProfile" element={<MyProfile currentId={props.currentId} setCurrentId={props.setCurrentId} user={username} setUser={setUserName}/>}/>
             {/* <Route path="SetAvatar" element={<SetAvatar/>}/> */}
+            <Route path="SignIn" element={<Login/>}/>
+            <Route path="SignUp" element={<Signup/>}/>
             <Route path= "chats" element={<Chatpage />} /> 
             </Routes>
             </div>           

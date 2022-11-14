@@ -154,9 +154,7 @@ const Signup = () => {
           onChange={(e) => setPassword(e.target.value)}
         />
          
-            <Button >
-              {show ? "Hide" : "Show"}
-            </Button>
+           
          
       </form>
       <form>
@@ -168,18 +166,13 @@ const Signup = () => {
             onChange={(e) => setConfirmpassword(e.target.value)}
           />
          
-            <Button >
-              {show ? "Hide" : "Show"}
-            </Button>
+           
+            
           
        
       </form>
      
-      <Button
-        
-      >
-        Sign Up
-      </Button>
+      
  </>
   );
 };

@@ -18,15 +18,7 @@ const MyProfile = ({ currentId,setCurrentId, user, setUser }) => {
     );
   }, []);
 
-  if (!username) {
-    return (
-      <Paper className={classes.paper}>
-        <Typography variant="h6" align="center">
-          Please Sign In to see your account.
-        </Typography>
-      </Paper>
-    );
-  }
+
   
   
 
@@ -34,7 +26,7 @@ return (
     <form className={classes.form}>
     <div className={classes.control}>
       <label htmlFor='title'>username: </label>
-      <input type='text' id='username' value={username.username} onChange={(e) => setUserName({ ...username.username, username: e.target.value })}/>
+      <input type='text' id='username' value={username?.username} onChange={(e) => setUserName({ ...username?.username, username: e.target.value })}/>
       <Button>update</Button>
     </div>
   </form>

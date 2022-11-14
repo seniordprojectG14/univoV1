@@ -93,17 +93,11 @@ const Login = () => {
             placeholder="Enter password"
           />
         
-            <Button >
-              {show ? "Hide" : "Show"}
-            </Button>
+           
           
        
         </form>
-      <Button
-        
-      >
-        Login
-      </Button>
+      
       </>
     // </VStack>
   );
